@@ -9,8 +9,6 @@ import * as THREE from "three";
 
 export default function Home() {
   const { isAuthenticated } = useMoralis();
-
-  if (!isAuthenticated) return <Login />;
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
   useEffect(() => {
@@ -38,17 +36,20 @@ export default function Home() {
       if (vantaEffect);
     };
   }, [vantaEffect]);
-
+  // if (!isAuthenticated) return <Login />;
   return (
     <div ref={vantaRef} className="h-screen overflow-y-scroll overflow-hidden">
       <Head>
         <title>Metaverse Chat App</title>
       </Head>
-
-      <div className="max-w-screen-2xl mx-auto">
-        <Header />
-        <Messages />
-      </div>
+      {isAuthenticated ? (
+        <div className="max-w-screen-2xl mx-auto">
+          <Header />
+          <Messages />
+        </div>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }
