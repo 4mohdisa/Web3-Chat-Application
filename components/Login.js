@@ -14,18 +14,17 @@ const Login = () => {
         NET({
           el: vantaRef.current,
           THREE,
+          color: 0xffffff,
+          backgroundColor: 0x0,
+          points: 10.0,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          scale: 2.0,
+          scale: 1.0,
           scaleMobile: 1.0,
-          color: 0xffffff,
-          backgroundColor: 0x0,
-          points: 10.0,
-          // maxDistance: 30.0,
-          spacing: 16.0,
+          spacing: 17.0,
         })
       );
     }
