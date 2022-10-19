@@ -14,7 +14,7 @@ const Login = () => {
         NET({
           el: vantaRef.current,
           THREE,
-          color: 0xffffff,
+          color: 0x616161,
           backgroundColor: 0x0,
           points: 10.0,
           mouseControls: true,
@@ -38,7 +38,7 @@ const Login = () => {
 
       <div className="flex flex-col absolute z-50  h-4/6 items-center justify-center w-full space-y-3">
         <Image
-          className="object-cover bg-black/50 backdrop-blur-md rounded-full"
+          className="object-cover bg-black/30 backdrop-blur-md rounded-full"
           height={150}
           width={150}
           src="/favicon.png"
@@ -57,7 +57,7 @@ const Login = () => {
           objectFit="cover"
           src="https://links.papareact.com/55n"
         /> */}
-        <div className="fixed top-0 left-0 w-full h-full bg-black/50" />
+        {/* <div className="fixed top-0 left-0 w-full h-full bg-black/20" /> */}
       </div>
     </div>
   );
