@@ -6,11 +6,11 @@ import TimeAgo from "timeago-react";
 const Message = ({ message }) => {
   const { user } = useMoralis();
 
-  const isUserMessage = user.get("ethAddress") === user.get("ethAddress");
+  const isUserMessage = message.get("ethAddress") === user.get("ethAddress");
 
   return (
     <div
-      className={`flex items-end  space-x-2 relative ${
+      className={`flex items-end space-x-2 relative ${
         isUserMessage && "justify-end"
       }`}
     >
@@ -31,7 +31,8 @@ const Message = ({ message }) => {
       <TimeAgo
         className={`text-[10px] italic text-white ${
           isUserMessage && "order-first pr-1"
-        }`}
+        }
+        `}
         datetime={message.createdAt}
       />
       <p

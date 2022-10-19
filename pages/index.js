@@ -20,8 +20,8 @@ export default function Home() {
           color: 0xffffff,
           backgroundColor: 0x0,
           points: 10.0,
-          mouseControls: true,
-          touchControls: true,
+          mouseControls: false,
+          touchControls: false,
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
@@ -38,14 +38,17 @@ export default function Home() {
   }, [vantaEffect]);
   // if (!isAuthenticated) return <Login />;
   return (
-    <div ref={vantaRef} className="h-screen overflow-y-scroll overflow-hidden">
+    <div ref={vantaRef} className="h-screen overflow-hidden">
+      {/* <div  className="h-screen z-0" /> */}
       <Head>
         <title>Metaverse Chat App</title>
       </Head>
       {isAuthenticated ? (
-        <div className="max-w-screen-2xl mx-auto">
+        <div className="max-w-screen-2xl z-50 mx-auto">
           <Header />
-          <Messages />
+          <div className="max-w-3xl mx-auto">
+            <Messages />
+          </div>
         </div>
       ) : (
         <Login />

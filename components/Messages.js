@@ -3,7 +3,7 @@ import { ByMoralis, useMoralis, useMoralisQuery } from "react-moralis";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
 
-const MINS_DURATION = 15;
+const MINS_DURATION = 15 * 10000;
 
 const Messages = () => {
   const { user } = useMoralis();
@@ -26,8 +26,8 @@ const Messages = () => {
   console.log(data);
 
   return (
-    <div className="pb-56">
-      <div className="space-y-10 p-4 w-full md:w-5/6">
+    <div className="h-[30rem] overflow-y-scroll z-50 bg-black/40 ">
+      <div className="space-y-10 p-4 ">
         {data.map((message) => (
           <Message key={message.id} message={message} />
         ))}

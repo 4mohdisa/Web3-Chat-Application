@@ -51,14 +51,7 @@ const Login = () => {
           Login to the Metaverse
         </button>
       </div>
-      <div ref={vantaRef} className="w-full h-screen">
-        {/* <Image
-          layout="fill"
-          objectFit="cover"
-          src="https://links.papareact.com/55n"
-        /> */}
-        {/* <div className="fixed top-0 left-0 w-full h-full bg-black/20" /> */}
-      </div>
+      <div ref={vantaRef} className="w-full h-screen"></div>
     </div>
   );
 };
