@@ -10,7 +10,7 @@ const Message = ({ message }) => {
 
   return (
     <div
-      className={`flex items-end space-x-2 relative ${
+      className={`flex items-end  space-x-2 relative ${
         isUserMessage && "justify-end"
       }`}
     >
@@ -19,24 +19,24 @@ const Message = ({ message }) => {
       </div>
 
       <div
-        className={`flex space-x-4 p-3 rounded-lg ${
+        className={`flex space-x-4 p-3 rounded-lg text-white ${
           isUserMessage
-            ? "rounded-br-none bg-pink-300"
-            : "rounded-bl-none bg-blue-400"
+            ? "rounded-br-none bg-gray-300/30 backdrop-blur-sm"
+            : "rounded-bl-none bg-blue-400/30 backdrop-blur-sm"
         }`}
       >
         <p>{message.get("message")}</p>
       </div>
 
       <TimeAgo
-        className={`text-[10px] italic text-gray-400 ${
+        className={`text-[10px] italic text-white ${
           isUserMessage && "order-first pr-1"
         }`}
         datetime={message.createdAt}
       />
       <p
         className={`absolute -bottom-5 text-xs ${
-          isUserMessage ? "text-pink-300" : "text-blue-400"
+          isUserMessage ? "text-white" : "text-blue-400"
         }`}
       >
         {message.get("username")}

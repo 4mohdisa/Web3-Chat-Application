@@ -7,21 +7,20 @@ import ChangeUsername from "./ChangeUsername";
 const Header = () => {
   const { user } = useMoralis();
   return (
-    <div className="sticky top-0 p-5 z-50 bg-white shadow-sm border-b-2 border-pink-700 text-pink-500">
+    <div className="sticky top-0 p-2 z-50 bg-black/30 backdrop-blur-md shadow-sm border-b-1 border-white text-gray-500">
       <div className="grid grid-cols-5 lg:grid-cols-6 items-end lg:items-center">
         <div className="relative h-24 w-24 mx-auto hidden lg:inline-grid">
           <Image
             layout="fill"
             objectFit="cover"
             className="object-cover"
-            src="/344772-84.png"
+            src="/favicon.png"
           />
         </div>
         <div className="col-span-4 text-left lg:text-center">
-          <div className="h-48 w-48 relative lg:mx-auto border-pink-500 border-8 rounded-full">
+          <div className="h-24 w-24 relative lg:mx-auto border-gray-500 border-4 rounded-full">
             <Avatar logoutOnPress />
           </div>
-          <h1 className="text-3xl ">Welcome to METAVERSE</h1>
           <h2 className="text-5xl font-bold truncate">{user.getUsername()}</h2>
           <ChangeUsername />
         </div>

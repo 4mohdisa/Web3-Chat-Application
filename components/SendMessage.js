@@ -32,7 +32,7 @@ const SendMessage = ({ endOfMessagesRef }) => {
     setMessage("");
   };
   return (
-    <form className="flex fixed bottom-10 bg-black opacity-80 px-6 py-4 max-w-2xl shadow-xl border-4 border-blue-400 z-50 rounded-full w-11/12">
+    <form className="flex fixed bottom-10 bg-black/40 backdrop-blur-sm px-6 py-4 max-w-2xl shadow-xl border-[1px] border-white z-50 rounded-full w-11/12">
       <input
         className="flex-grow outline-none bg-transparent text-white placeholder-gray-500"
         type="text"
@@ -40,12 +40,8 @@ const SendMessage = ({ endOfMessagesRef }) => {
         onChange={(e) => setMessage(e.target.value)}
         placeholder={`Enter Message ${user.getUsername()}...`}
       />
-      <button
-        type="submit"
-        onClick={sendMessage}
-        className="font-bold text-pink-500"
-      >
-        Send
+      <button type="submit" onClick={sendMessage}>
+        <img src="/send-icon.svg" alt="" />
       </button>
     </form>
   );
