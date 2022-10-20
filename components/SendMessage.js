@@ -27,7 +27,7 @@ const SendMessage = ({ endOfMessagesRef }) => {
         }
       );
 
-    // endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
+    endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
 
     setMessage(" ");
   };
